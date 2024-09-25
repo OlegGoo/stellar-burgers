@@ -12,7 +12,7 @@ export const FeedInfoUI: FC<FeedInfoUIProps> = memo(
       <section>
         <div className={styles.columns}>
           <HalfColumn
-            orders={readyOrders}
+            orders={readyOrders.slice(0, 5)}
             title={'Готовы'}
             textColor={'blue'}
           />
