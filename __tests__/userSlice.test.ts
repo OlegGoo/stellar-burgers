@@ -1,4 +1,5 @@
 import {
+  initialState,
   userReducer,
   loginUser,
   registerUser,
@@ -29,14 +30,6 @@ const mockOrders: TOrder[] = [
 ];
 
 describe('userReducer', () => {
-  const initialState = {
-    isAuthChecked: false,
-    orders: [],
-    user: null,
-    loading: false,
-    error: null
-  };
-
   test('loginUser pending state', () => {
     const action = { type: loginUser.pending.type };
     const state = userReducer(initialState, action);

@@ -1,4 +1,5 @@
 import {
+  initialState,
   constructorReducer,
   addIngredients,
   removeIngredients,
@@ -8,11 +9,6 @@ import {
 import { TConstructorIngredient } from '../src/utils/types';
 
 describe('constructorReducer', () => {
-  const initialState = {
-    bun: null,
-    ingredients: []
-  };
-
   test('добавление булочки', () => {
     const bun: TConstructorIngredient = {
       _id: '1',

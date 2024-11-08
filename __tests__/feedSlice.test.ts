@@ -1,4 +1,8 @@
-import { feedReducer, getFeed } from '../src/services/slices/feedSlice';
+import {
+  initialState,
+  feedReducer,
+  getFeed
+} from '../src/services/slices/feedSlice';
 import { TOrder } from '../src/utils/types';
 
 const mockOrders: TOrder[] = [
@@ -29,14 +33,6 @@ const mockApiResponse = {
 };
 
 describe('feedReducer', () => {
-  const initialState = {
-    orders: [],
-    total: 0,
-    totalToday: 0,
-    loading: false,
-    error: null
-  };
-
   test('pending state', () => {
     const action = { type: getFeed.pending.type };
     const state = feedReducer(initialState, action);

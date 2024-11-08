@@ -1,4 +1,5 @@
 import {
+  initialState,
   orderReducer,
   createOrder,
   getOrderByNumber,
@@ -17,13 +18,6 @@ const mockOrder: TOrder = {
 };
 
 describe('orderReducer', () => {
-  const initialState = {
-    orderModalData: null,
-    orderRequest: false,
-    loading: false,
-    error: null
-  };
-
   test('createOrder pending state', () => {
     const action = { type: createOrder.pending.type };
     const state = orderReducer(initialState, action);

@@ -1,4 +1,5 @@
 import {
+  initialState,
   ingredientsReducer,
   getIngredients
 } from '../src/services/slices/IngredientsSlice';
@@ -34,12 +35,6 @@ const mockIngredients: TIngredient[] = [
 ];
 
 describe('ingredientsReducer', () => {
-  const initialState = {
-    ingredients: [],
-    loading: false,
-    error: null
-  };
-
   test('pending state', () => {
     const action = { type: getIngredients.pending.type };
 
