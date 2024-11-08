@@ -10,7 +10,7 @@ import { orderReducer } from './slices/orderSlice';
 import { feedReducer } from './slices/feedSlice';
 import { userReducer } from './slices/userSlice';
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   IngredientsSlice: ingredientsReducer,
   constructorSlice: constructorReducer,
   orderSlice: orderReducer,
@@ -18,7 +18,7 @@ const rootReducer = combineReducers({
   userSlice: userReducer
 });
 
-const store = configureStore({
+export const store = configureStore({
   reducer: rootReducer,
   devTools: process.env.NODE_ENV !== 'production'
 });
