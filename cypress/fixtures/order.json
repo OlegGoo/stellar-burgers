@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "order": {
+    "id": "1",
+    "status": "done",
+    "name": "Бургер 1",
+    "createdAt": "2024",
+    "updatedAt": "2024",
+    "number": 101,
+    "ingredients": "['ingredient1', 'ingredient2']"
+  }
+}
+
+
+
