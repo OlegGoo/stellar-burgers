@@ -9,7 +9,7 @@ import {
   TRegisterData,
   resetPasswordApi,
   getOrdersApi
-} from '@api';
+} from '../../utils/burger-api';
 import { TUser, TOrder } from '@utils-types';
 import { deleteCookie, setCookie, getCookie } from '../../utils/cookie';
 
@@ -97,7 +97,7 @@ type TUserState = {
   error: string | null;
 };
 
-const initialState: TUserState = {
+export const initialState: TUserState = {
   isAuthChecked: false,
   orders: [],
   user: null,
